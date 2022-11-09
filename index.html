@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rickapp</title>
+    <!-- style css file -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- script file -->
+    <script type="module" src="js/App.js" defer></script>
+    <!-- script icon -->
+    <script src="https://kit.fontawesome.com/cb9a8cdf3e.js" crossorigin="anonymous"></script>
+    <!-- google fonts api -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet" />
+    <!-- google icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- favicon  -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/logo.png">
+</head>
+
+<body>
+    <!-- filter -->
+    <svg class="invisible">
+        <defs>
+            <filter id="goo">
+                <feGaussianBlur in='SourceGraphic' stdDeviation='10' result='name' />
+                <feColorMatrix in='name' mode='matrix' values='
+                        1 0 0 0 0
+                        0 1 0 0 0 
+                        0 0 1 0 0
+                        0 0 0 30 -15 ' result='aab' />
+                <feBlend in='SourceGraphic' in2='aab' />
+            </filter>
+        </defs>
+    </svg>
+    <!-- RickAndMorty -->
+    <div class="container">
+        <header class="header">
+            <div class="logo-container">
+                <img onClick="window.location.reload();" id="logo" src="img/logo.png" alt="rick&morty">
+            </div>
+        </header>
+
+        <div class="main-page">
+            <div class="display">
+                <!-- main content -->
+                <article id="character-container">
+                </article>
+                <!-- liquid buttons -->
+                <div class="btn-container">
+                    <!-- prev-->
+                    <div id="previous-btn" class="btn go-prev">
+                        <span class="material-icons arrow">
+                            arrow_back_ios
+                        </span>
+                        <div class="blurred">
+                            <span></span><span></span>
+                        </div>
+                    </div>
+                    <!-- next -->
+                    <div id="next-btn" class="btn go-next">
+                        <span class="material-icons arrow">
+                            arrow_forward_ios
+                        </span>
+                        <div class="blurred">
+                            <span></span><span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    <footer>
+        <div class="foot">
+          <div class="links">
+            <span href="https://github.com/philama" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></span>
+            <span href="https://www.linkedin.com/in/guardini-philama-4a77aa105/" target="_blank"
+              ><i class="fa fa-linkedin-square" aria-hidden="true"></i
+            ></span>
+          </div>
+          <p>Guardini Philama 2022 &copy; - SkillFactory React</p>
+        </div>
+      </footer>
+    </div>
+</body>
+
+</html>
